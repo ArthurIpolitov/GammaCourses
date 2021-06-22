@@ -90,7 +90,6 @@
 # perimeter = a + b + c
 # halfPerimeter = perimeter / 2
 # triangleArea = (halfPerimeter * (halfPerimeter - a) * (halfPerimeter - b) * (halfPerimeter - c)) ** 0.5
-#
 # print('Perimeter:', perimeter, '| Half Perimeter:', halfPerimeter, '| Triangle Area:', triangleArea)
 
 """ Name Surname Linn """
