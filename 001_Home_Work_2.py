@@ -12,46 +12,67 @@ print("-------------------------------")
 
 
 userNum = input("Введите число чтобы выбрать вашу задачу: ")
-conA = 1
+firstNum = input("Введите первое число: ")
+secondNum = input("Введите второе число: ")
 
-if int(userNum) == 1:
-    digiA = 1
-    firstNum = input("Введите первое число: ")
-    secondNum = input("Введите второе число: ")
-else:
-    exit()
-
-if firstNum.isdigit() == True:
-    conA = 0
-else:
-    exit()
-
-if secondNum.isdigit() == True:
-    conA = 0
-else:
-    exit()
-
-if conA == 0:
+if userNum == "1":
     finalVar = int(secondNum) + int(firstNum)
     print("Сумма чисел равна: " + str(finalVar))
 
-if int(userNum) == 2:
-    digiA = 1
-    firstNum = input("Введите первое число: ")
-    secondNum = input("Введите второе число: ")
-else:
-    exit()
 
-if firstNum.isdigit() == True:
-    conA = 0
+elif userNum == "2":
+    finalVar = int(firstNum) - int(secondNum)
+    print("Вычитаемость чисел равна: " + str(finalVar))
 else:
-    exit()
+    print("Введено неправильное число")
 
-if secondNum.isdigit() == True:
-    conA = 0
-else:
-    exit()
 
-if conA == 0:
-    finalVar = int(secondNum) - int(firstNum)
-    print("Сумма чисел равна: " + str(finalVar))
+
+
+
+
+
+
+# conA = 1
+
+# if int(userNum) == 1:
+#     digiA = 1
+#     firstNum = input("Введите первое число: ")
+#     secondNum = input("Введите второе число: ")
+# else:
+#     exit()
+#
+# if firstNum.isdigit() == True:
+#     conA = 0
+# else:
+#     exit()
+#
+# if secondNum.isdigit() == True:
+#     conA = 0
+# else:
+#     exit()
+#
+# if conA == 0:
+#     finalVar = int(secondNum) + int(firstNum)
+#     print("Сумма чисел равна: " + str(finalVar))
+#
+# if int(userNum) == 2:
+#     digiA = 1
+#     firstNum = input("Введите первое число: ")
+#     secondNum = input("Введите второе число: ")
+# else:
+#     exit()
+#
+# if firstNum.isdigit() == True:
+#     conA = 0
+# else:
+#     exit()
+#
+# if secondNum.isdigit() == True:
+#     conA = 0
+# else:
+#     exit()
+#
+# if conA == 0:
+#     finalVar = int(secondNum) - int(firstNum)
+#     print("Сумма чисел равна: " + str(finalVar))
