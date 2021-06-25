@@ -16,7 +16,7 @@ numberVar = input(yelCol + "Введите число: " + endCol)
 
 if int(numberVar) % 2 == 0:
     # # Вычисления
-    squareRootVar = int(numberVar) ** 0.5
+    squareRootVar = int(numberVar) ** int(numberVar)
     numberLenVar = len(numberVar)
     # #
     # # Проверка на склонения числа
@@ -26,7 +26,7 @@ if int(numberVar) % 2 == 0:
         con = " символов"
     # #
     # # Вывод данных
-    print(greenCol + "Четное число " + numberVar + " ,имеет корень числа " + str(squareRootVar) +
+    print(greenCol + "Четное число " + numberVar + " ,имеет квадрат числа " + str(squareRootVar) +
           ". Имеет " + str(numberLenVar) + con + endCol)
 
     # #
