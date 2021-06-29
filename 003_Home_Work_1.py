@@ -9,14 +9,14 @@
 '''
 print("---------------------------------------")
 user_number = input("Введите число: ")
-
-for new_num in range(1, int(user_number)):
-    if new_num % 3 == 0:
-        # print( str(new_num) + " число делится без остатка на 3| Введенное число: " + user_number)
-        print("Fizz")
-    if new_num % 5 == 0:
-        # print( str(new_num) + " число делится без остатка на 5| Введенное число: " + user_number)
-        print("Buzz")
+# user_number = 101
+for new_num in range(1, int(user_number) + 1):
     if new_num % 3 == 0 and new_num % 5 == 0:
         # print( str(new_num) + " число делится без остатка на 3 и на 5| Введенное число: " + user_number)
-        print("FizzBuzz")
+        print("FizzBuzz", new_num)
+    elif new_num % 3 == 0:
+        # print( str(new_num) + " число делится без остатка на 3| Введенное число: " + user_number)
+        print("Fizz", new_num)
+    elif new_num % 5 == 0:
+        # print( str(new_num) + " число делится без остатка на 5| Введенное число: " + user_number)
+        print("Buzz", new_num)
