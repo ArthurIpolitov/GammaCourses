@@ -6,6 +6,7 @@
  ------------------------------------- FUNCTIONS ---------------------------------------------------
  ----------------------------------------------------------------------------------------------------
 '''
+
 def data():
     if int(user_code[0]) % 2 == 0:
         gender = 'Female'
@@ -81,20 +82,19 @@ def validation():
                               second_formula[6] + int(user_code[7]) * second_formula[7] + int(user_code[8]) * \
                               second_formula[8] + int(user_code[9]) * second_formula[9]
             controll_left = controll_number % 11
-            print(str(controll_left))
             if str(controll_left) == user_code[10]:
-                print('Valid == 0')
+                print(f'Your ID CODE is Valid. Kontrollnumber is {controll_left} converge with {user_code[10]} in ID CODE: {user_code}')
             else:
-                print('Invalid == 0')
+                print(f'Your ID CODE is Invalid. Kontrollnumber is {controll_left} non converge with {user_code[10]} in ID CODE: {user_code}')
             # IF CONTROLLNUMBER LEFT IS 10 END
             # -------------------------------
             # IF CONTROLLNUMBER LEFT IS FINE
         elif controll_left != 0:
             print(str(controll_left))
             if str(controll_left) == user_code[10]:
-                print('Valid != 0')
+                print(f'Your ID CODE is Valid. Kontrollnumber is {controll_left} converge with {user_code[10]} in ID CODE: {user_code}')
             else:
-                print('Invalid != 0')
+                print(f'Your ID CODE is Invalid. Kontrollnumber is {controll_left} non converge with {user_code[10]} in ID CODE: {user_code}')
             # IF CONTROLLNUMBER LEFT IS FINE END
             # -------------------------------
         # CONTROLL LEFT VALID END
@@ -112,8 +112,8 @@ def validation():
  ------------------------------------- MAIN --------------------------------------------------------
  ----------------------------------------------------------------------------------------------------
 '''
-condition_user = True
 user_code = input('Please Enter your ID: ')
+condition_user = True
 while condition_user:
     user_choice = input('Please choose:\n'
 
