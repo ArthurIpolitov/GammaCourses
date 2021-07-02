@@ -70,7 +70,7 @@ def validation(user_code):
         controll_left = controll_number % 11
         # --------------------------
         # CONTROLL LEFT VALID
-        if controll_left == 10:
+        if controll_left == 10 or controll_left == 0:
             # IF CONTROLLNUMBER LEFT IS 10
             controll_number = int(user_code[0]) * second_formula[0] + int(user_code[1]) * second_formula[1] + int(
                 user_code[2]) * second_formula[2] + int(user_code[3]) * second_formula[3] + int(user_code[4]) * \
