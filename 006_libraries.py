@@ -14,7 +14,8 @@ import calendar
 # print(math.floor(25.523))
 #
 # print(math.radians(90))
-# print(math.degrees(90))
-# print(math.sin(90))
-for num in range(1,13):
-    print(calendar.month(2000, num, w=2, l=1))
+# # print(math.degrees(90))
+# # print(math.sin(90))
+# for num in range(1,13):
+#     print(calendar.month(2000, num, w=2, l=1))
+#
