@@ -1,0 +1,1 @@
+somelist = input()
