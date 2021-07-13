@@ -1,0 +1,2 @@
+There are 29743 words in text.
+There are 9271 uniqie words in text
