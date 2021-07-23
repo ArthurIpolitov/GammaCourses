@@ -1,7 +1,8 @@
 import pandas as pd
-import numpy as np
+import time as tm
 
 df = pd.read_csv('survey_results_public.csv')
+pd.set_option('display.max_rows', 70000)
 
 def user_menu():
     user_choice = input('Please choose\n'
@@ -16,9 +17,9 @@ def user_menu():
     elif user_choice == '2':
         averageminmax(df)
     elif user_choice == '3':
-        pass
+        countrycount(df)
     elif user_choice == '4':
-        pass
+        currencyDesc(df)
     elif user_choice == '5':
         print('Good Bye')
         exit()
@@ -26,12 +27,26 @@ def user_menu():
         user_menu()
 
 def hobby(df):
-    print('soon')
+    sorted_values = df[['Hobbyist', 'Respondent']]
+    print(sorted_values.groupby('Hobbyist').count())
+    tm.sleep(2)
+    user_menu()
 
 
 def averageminmax(df):
     print(f'Average age is {df["Age"].mean()}')
     print(f'Minimal age is {df["Age"].min()}')
     print(f'Max age is {df["Age"].max()}')
+    tm.sleep(2)
+    user_menu()
+def countrycount(df):
+    print(f'Countries: {df["Country"].value_counts()}')
+    tm.sleep(2)
+    user_menu()
+
+def currencyDesc(df):
+    print(f'Currency - {df["CurrencyDesc"].value_counts()}')
+    tm.sleep(2)
+    user_menu()
 
 user_menu()
