@@ -1,16 +1,17 @@
 import mysql.connector
 import pandas as pd
+import time as tm
 
 mydb = mysql.connector.connect(
     host='localhost',
     user='root',
     passwd='12345',
-    database='happiness_schema'
+    database='user_data'
 )
 # df = pd.read_sql_query('SELECT country_or_region, score FROM happiness', mydb)
 # print(df['country_or_region'])
 
-# dbcursor = mydb.cursor()
+dbcursor = mydb.cursor()
 
 # dbcursor.execute('CREATE SCHEMA students')
 # dbcursor.execute('CREATE TABLE student (name VARCHAR(255), surname VARCHAR(255), age INTEGER(10))')
@@ -20,7 +21,7 @@ mydb = mysql.connector.connect(
 # second = input("Input Student Info: ")
 # third = input("Input Student Info: ")
 #
-# sql_formula = 'INSERT INTO student (name, surname, age) VALUES (%s, %s, %s)'
+sql_formula = 'INSERT INTO student (name, surname, age) VALUES (%s, %s, %s)'
 # student1 = (first,second, int(third))
 # dbcursor.execute(sql_formula, student1)
 # mydb.commit()
@@ -39,3 +40,20 @@ mydb = mysql.connector.connect(
 #           f'7.Generosity: {row[7]}\n'
 #           f'8.Perception of Corruption: {row[8]}')
 #     print('-----------------------------------------------------------------')
+
+
+def add_to_db():
+    user_data_info = 'INSERT INTO user_main (user_name, user_surname, user_birthdate, user_email) VALUES (%s, %s, %s, %s)'
+    print('Please enter your data')
+    tm.sleep(2)
+    ur_name = input('Input your name: ')
+    ur_surname = input('Input your surname: ')
+    ur_birthday = input('Input your birthday(YYYY-MM-DD): ')
+    ur_email = input('Input your email: ')
+    dataUser2 = (ur_name, ur_surname, ur_birthday, ur_email)
+    dbcursor.execute(user_data_info, dataUser2)
+    mydb.commit()
+    tm.sleep(2)
+    print('Done!')
+
+add_to_db()
