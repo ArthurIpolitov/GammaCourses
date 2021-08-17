@@ -50,12 +50,15 @@ root.resizable(width=False, height=False)
 
 
 
-root.iconbitmap("favicon.ico")
+# root.iconbitmap("favicon.ico")
+#
+# MyPyImage = PhotoImage(file='py.png')
+# MyPyImageLabel = Label(root, image=MyPyImage)
+# MyPyImageLabel.pack()
+#
+# Button(root, text='End', command=root.quit).pack()
 
-MyPyImage = PhotoImage(file='py.png')
-MyPyImageLabel = Label(root, image=MyPyImage)
-MyPyImageLabel.pack()
-
-Button(root, text='End', command=root.quit).pack()
-
+MyPyFrame = LabelFrame(root, text='SomeText', pady=50, padx=50).pack()
+button = Button(MyPyFrame, text = 'Frame').pack()
+#
 root.mainloop()

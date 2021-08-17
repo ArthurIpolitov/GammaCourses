@@ -55,9 +55,7 @@ while True:
     # --------------------------
     print(
         f'Your gender is {gender}. Birth date is {user_id[5:7]}.{user_id[3:5]}.{birth_cent}{user_id[1:3]} and birth region is {region}')
-
         continue
-
     elif user_choice == '2':
 
         continue
