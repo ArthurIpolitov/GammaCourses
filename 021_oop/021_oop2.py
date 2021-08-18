@@ -1,6 +1,9 @@
 import datetime
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 
-
+print('\033[31m' + 'some red text')
 class Employee:
     # Class variables
     raise_amount = 1.04
@@ -10,13 +13,29 @@ class Employee:
         self.first_name = first_name
         self.last_name = last_name
         self.salary = salary
-        self.email = first_name.lower() + "." + last_name.lower() + "@storytellers.com"
 
+    @property
+    def email(self):
+        return self.first_name.lower() + "." + self.last_name.lower() + "@storytellers.com"
+
+    @property
     def Fullname(self):
         return self.first_name + ' ' + self.last_name
 
     def pay_raise(self):
         self.salary = self.salary * self.raise_amount
+
+    @Fullname.setter
+    def Fullname(self, name):
+        first, last = name.split()
+        self.first_name = first
+        self.last_name = last
+
+    @Fullname.deleter
+    def Fullname(self):
+        print(f'Delete {self.Fullname}')
+        self.first_name = None
+        self.last_name = None
 
     def __repr__(self):
         return f"Employee{self.first_name, self.last_name, self.salary}"
@@ -62,7 +81,6 @@ class Manager(Employee):
 
 
 
-
 emp1 = Employee('Artur','Ipolitov',2000)
 emp2 = Employee('Mary', 'Gold', 2000)
 emp3 = Employee('Mark', 'Goldberg', 6000)
@@ -75,4 +93,4 @@ mgr1 = Manager('John','Hughmoungus', 5000)
 # mgr1.add_employee(dev1)
 # print(mgr1.employees)
 
-print(emp4.__str__())
+
